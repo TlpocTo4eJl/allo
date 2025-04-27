@@ -1,0 +1,17 @@
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import *
+app = QApplication([])
+my_wid = QWidget()
+my_wid.setWindowTitle('Третий экран')
+my_wid.move(900,70)
+my_wid.resize(400,200)
+index = QLabel('Индекс Руфье: 4.8')
+heart = QLabel('Работоспособность сердца: выше среднего')
+v_line = QVBoxLayout()
+v_line.addWidget(index,alignment=Qt.AlignCenter)
+v_line.addWidget(heart,alignment=Qt.AlignCenter)
+layout_main = QHBoxLayout()
+layout_main.addLayout(v_line)
+my_wid.setLayout(layout_main)
+my_wid.show()
+app.exec_()
